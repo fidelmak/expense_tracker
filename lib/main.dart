@@ -7,7 +7,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter App',
+      title: 'To Do App',
+      color: Colors.green,
       home: MyHomePage(),
     );
   }
