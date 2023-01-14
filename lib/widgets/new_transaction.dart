@@ -31,7 +31,7 @@ class NewTransaction extends StatelessWidget {
               ),
               FlatButton(
                 child: Text('Add Transaction'),
-                textColor: Color.fromARGB(255, 0, 0, 0),
+                textColor: Colors.green,
                 onPressed: () {
                   addTx(titleController.text,
                       double.parse(amountController.text));
