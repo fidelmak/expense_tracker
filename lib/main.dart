@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'To Do App',
+      title: 'Expense Tracker',
       color: Colors.green,
       home: MyHomePage(),
     );
