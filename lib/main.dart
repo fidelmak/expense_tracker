@@ -8,7 +8,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Expense Tracker',
-      color: Colors.green,
       home: MyHomePage(),
     );
   }
@@ -28,7 +27,8 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('flutter App'),
+        title: Text('Expense Tracker'),
+        backgroundColor: Colors.green,
       ),
       body: SingleChildScrollView(
         child: Column(
