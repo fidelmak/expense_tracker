@@ -11,6 +11,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Expense Tracker',
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+        accentColor: Colors.lightGreenAccent,
+        cursorColor: Colors.green,
+        fontFamily: 'Quicksand',
+      ),
       home: MyHomePage(),
     );
   }
