@@ -16,6 +16,12 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.lightGreenAccent,
           cursorColor: Colors.green,
           fontFamily: 'Quicksand',
+          textTheme: ThemeData.light().textTheme.copyWith(
+                  titleSmall: TextStyle(
+                fontFamily: 'OpenSans',
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+              )),
           appBarTheme: AppBarTheme(
             textTheme: ThemeData.light().textTheme.copyWith(
                     subtitle1: TextStyle(
