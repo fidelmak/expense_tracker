@@ -12,11 +12,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Expense Tracker',
       theme: ThemeData(
-        primarySwatch: Colors.green,
-        accentColor: Colors.lightGreenAccent,
-        cursorColor: Colors.green,
-        fontFamily: 'Quicksand',
-      ),
+          primarySwatch: Colors.green,
+          accentColor: Colors.lightGreenAccent,
+          cursorColor: Colors.green,
+          fontFamily: 'Quicksand',
+          appBarTheme: AppBarTheme(
+            textTheme: ThemeData.light().textTheme.copyWith(
+                    subtitle1: TextStyle(
+                  fontFamily: 'OpenSans',
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                )),
+          )),
       home: MyHomePage(),
     );
   }
