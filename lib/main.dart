@@ -47,18 +47,18 @@ class _MyHomePageState extends State<MyHomePage> {
   // final amountController = TextEditingController();
 
   final List<Transaction> _userTransaction = [
-    Transaction(
-      id: 't1',
-      title: 'Garri',
-      amount: 1500.00,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: 't2',
-      title: 'Laptop Casing',
-      amount: 3500.00,
-      date: DateTime.now(),
-    ),
+    // //Transaction(
+    //  // id: 't1',
+    //   //title: 'Garri',
+    //   //amount: 1500.00,
+    //  // date: DateTime.now(),
+    // //),
+    // //Transaction(
+    //   //id: 't2',
+    //   //title: 'Laptop Casing',
+    //  // amount: 3500.00,
+    //  // date: DateTime.now(),
+    // //),
   ];
 
   void _addNewTransaction(String txTitle, double txAmount) {
@@ -113,6 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   elevation: 5,
                 ),
               ),
+              Image(image: AssetImage('images/dia.png')),
               TransactionList(_userTransaction),
             ]),
       ),
