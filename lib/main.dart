@@ -113,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   elevation: 5,
                 ),
               ),
-              Image(image: AssetImage('images/dia.png')),
+              Image.asset('images/dia.png'),
               TransactionList(_userTransaction),
             ]),
       ),
