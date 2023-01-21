@@ -113,10 +113,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   elevation: 5,
                 ),
               ),
-              Image.asset(
-                'images/dia.png',
-                fit: BoxFit.cover,
-              ),
+              // Image.asset(
+              //   'images/dia.png',
+              //   height: 200,
+              //   width: 200,
+              // ),
               TransactionList(_userTransaction),
             ]),
       ),
