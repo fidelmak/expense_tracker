@@ -42,12 +42,25 @@ class Chart extends StatelessWidget {
   Widget build(BuildContext context) {
     print(groupedTransactionValues);
     return Card(
-      elevation: 0,
-      margin: EdgeInsets.all(20),
-      child: Row(
-          children: groupedTransactionValues.map((data) {
-        return chartBar(data['day'], data['amount'], totalSpending);
-      }).toList()),
-    );
+        elevation: 6,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        margin: const EdgeInsets.only(top: 10, left: 15, right: 15),
+        child: Container(
+          padding: const EdgeInsets.all(10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: groupedTransactionValues.map((data) {
+              return Flexible(
+                fit: FlexFit.tight,
+                child: ChartBar(
+                    data['day'] as String,
+                    data['amount'] as double,
+                    maxSpending == 0.0
+                        ? 0.0
+                        : (data['amount'] as double) / maxSpending),
+              );
+            }).toList(),
+          ),
+        ));
   }
 }
