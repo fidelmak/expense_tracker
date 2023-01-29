@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.green,
           accentColor: Colors.lightGreenAccent,
-          cursorColor: Colors.green,
+         
           fontFamily: 'Quicksand',
           textTheme: ThemeData.light().textTheme.copyWith(
                   titleSmall: TextStyle(
