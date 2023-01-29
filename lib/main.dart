@@ -11,11 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Expense Tracker',
       theme: ThemeData(
           primarySwatch: Colors.green,
           accentColor: Colors.lightGreenAccent,
-         
           fontFamily: 'Quicksand',
           textTheme: ThemeData.light().textTheme.copyWith(
                   titleSmall: TextStyle(
