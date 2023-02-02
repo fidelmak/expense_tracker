@@ -15,14 +15,21 @@ class MyApp extends StatelessWidget {
       title: 'Expense Tracker',
       theme: ThemeData(
           primarySwatch: Colors.green,
+          
           accentColor: Colors.lightGreenAccent,
+          
           fontFamily: 'Quicksand',
           textTheme: ThemeData.light().textTheme.copyWith(
                   titleSmall: TextStyle(
                 fontFamily: 'OpenSans',
                 fontSize: 15,
                 fontWeight: FontWeight.bold,
-              )),
+                
+              )
+              
+              button:TextStyle(color: Colors.white),
+              ),
+              
           appBarTheme: AppBarTheme(
             textTheme: ThemeData.light().textTheme.copyWith(
                     subtitle1: TextStyle(
