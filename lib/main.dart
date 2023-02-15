@@ -18,21 +18,19 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.lightGreenAccent,
           fontFamily: 'Quicksand',
           textTheme: ThemeData.light().textTheme.copyWith(
-              titleSmall: TextStyle(
-                fontFamily: 'OpenSans',
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
+                headline6: TextStyle(
+                  fontFamily: 'OpenSans',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
+                button: TextStyle(color: Colors.white),
               ),
-              button: TextStyle(color: Colors.white)),
-          buttonTheme: const ButtonThemeData(
-            buttonColor: Colors.white,
-          ),
           appBarTheme: AppBarTheme(
             textTheme: ThemeData.light().textTheme.copyWith(
-                    titleSmall: TextStyle(
+                    headline6: TextStyle(
                   fontFamily: 'OpenSans',
-                  fontSize: 20,
                   fontWeight: FontWeight.bold,
+                  fontSize: 20,
                 )),
           )),
       home: MyHomePage(),
