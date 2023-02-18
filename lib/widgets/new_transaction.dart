@@ -14,7 +14,8 @@ class _NewTransactionState extends State<NewTransaction> {
   final _titleController = TextEditingController();
 
   final _amountController = TextEditingController();
-  late DateTime _selectedDate;
+
+  DateTime _selectedDate = DateTime.now();
 
   void _submitData() {
     final enteredTitle = _titleController.text;
@@ -28,19 +29,16 @@ class _NewTransactionState extends State<NewTransaction> {
     Navigator.of(context).pop();
   }
 
-  void _presentDatePicker() {
-    showDatePicker(
+  void _presentDatePicker() async {
+    final pickedDate = await showDatePicker(
       context: context,
       initialDate: DateTime.now(),
       firstDate: DateTime(2019),
       lastDate: DateTime.now(),
-    ).then((pickedDate) {
-      if (pickedDate == null) {
-        return;
-      }
-      setState(
-        () => _selectedDate = pickedDate,
-      );
+    );
+
+    setState(() {
+      _selectedDate = pickedDate!;
     });
   }
 
@@ -49,12 +47,18 @@ class _NewTransactionState extends State<NewTransaction> {
     return Card(
         elevation: 5,
         child: Container(
-          padding: EdgeInsets.all(10),
+          padding: EdgeInsets.only(
+            top: 10,
+            left: 10,
+            right: 10,
+            bottom: MediaQuery.of(context).viewInsets.bottom + 10,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
               TextField(
-                decoration: InputDecoration(labelText: 'Title'),
+                decoration: InputDecoration(
+                    labelText: 'Title', focusColor: Colors.green),
 
                 controller: _titleController,
                 onSubmitted: (_) => _submitData(),
@@ -72,7 +76,11 @@ class _NewTransactionState extends State<NewTransaction> {
               Container(
                 height: 70,
                 child: Row(children: <Widget>[
-                  Text('No Date Chosen'),
+                  Text(
+                    _selectedDate == null
+                        ? 'No Date Chosen'
+                        : 'Picked Date ${DateFormat.yMd().format(_selectedDate)}',
+                  ),
                   TextButton(
                     style: TextButton.styleFrom(
                         primary: Theme.of(context).primaryColor),
