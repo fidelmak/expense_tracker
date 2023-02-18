@@ -18,10 +18,11 @@ class _NewTransactionState extends State<NewTransaction> {
   DateTime _selectedDate = DateTime.now();
 
   void _submitData() {
-    final enteredTitle = _titleController.text;
-    final enteredAmount = double.parse(_amountController.text);
+    if (_amountController.text.isEmpty) return;
+    final String enteredTitle = _titleController.text;
+    final double enteredAmount = double.parse(_amountController.text);
 
-    if (enteredTitle.isEmpty || enteredAmount <= 0) {
+    if (enteredTitle.isEmpty || enteredAmount <= 0 || _selectedDate == null) {
       return;
     }
     widget.addTx(enteredTitle, enteredAmount);
@@ -33,7 +34,7 @@ class _NewTransactionState extends State<NewTransaction> {
     final pickedDate = await showDatePicker(
       context: context,
       initialDate: DateTime.now(),
-      firstDate: DateTime(2019),
+      firstDate: DateTime(2020),
       lastDate: DateTime.now(),
     );
 
