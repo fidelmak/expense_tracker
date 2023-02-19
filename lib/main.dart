@@ -130,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: (MediaQuery.of(context).size.height -
                           appbar.preferredSize.height -
                           MediaQuery.of(context).padding.top) *
-                      0.4,
+                      0.3,
                   child: Chart(_recentTransactions)),
               // Image.asset(
               //   'images/dia.png',
@@ -141,7 +141,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: (MediaQuery.of(context).size.height -
                           appbar.preferredSize.height -
                           MediaQuery.of(context).padding.top) *
-                      0.6,
+                      0.7,
                   child:
                       TransactionList(_userTransaction, _deleteTransactions)),
             ]),
